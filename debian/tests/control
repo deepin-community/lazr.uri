@@ -1,0 +1,2 @@
+Tests: py3
+Depends: python3-all, python3-lazr.uri, python3-zope.testrunner

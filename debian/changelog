@@ -1,5 +1,187 @@
-template-repository (1.0-1) unstable; urgency=medium
+lazr.uri (1.0.6-4) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Use pybuild-plugin-pyproject.
+  * Standards-Version: 4.7.0.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Colin Watson <cjwatson@debian.org>  Mon, 26 Aug 2024 16:20:10 +0100
+
+lazr.uri (1.0.6-3) unstable; urgency=medium
+
+  * Team upload.
+  * Run tests at build time using pytest.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 10 Dec 2022 13:35:50 +0000
+
+lazr.uri (1.0.6-2) unstable; urgency=medium
+
+  * Set TERM=dumb during autopkgtest to prevent output to stderr, thanks
+    Graham Inggs.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 18 Dec 2021 15:04:10 -0400
+
+lazr.uri (1.0.6-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Stefano Rivera ]
+  * New upstream release.
+  * Update upstream metadata.
+  * d/control: Update Uploader field with new Debian Python Team contact
+    address.
+  * Drop dependency on python3-pkg-resources, no longer required.
+  * Bump Standards-Version to 4.6.0, no changes needed.
+  * Bump copyright years.
+  * Bump debhelper compat level to 13.
+  * Bump watch file version to 4.
+  * Autopkgtest: Run against all supported python3 versions.
+  * Autopkgtest: Run against the installed module, not source checkout.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 17 Sep 2021 11:48:14 -0700
+
+lazr.uri (1.0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump copyright years.
+  * Update signing-key:
+    - Add Colin Watson
+    - Remove Gavin Panella, Leonard Richardson.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 07 Jul 2020 15:12:36 -0700
+
+lazr.uri (1.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patches, superseded upstream.
+  * Bump Standards-Version to 4.5.0, no changes needed.
+  * Docs were reorganised upstream, update locations.
+  * Enable build-time tests, now that they work.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 19 Jun 2020 14:16:15 -0700
+
+lazr.uri (1.0.3-4) unstable; urgency=medium
+
+  * Team upload.
+  * Use debhelper-compat instead of debian/compat.
+  * Drop Python 2 support (Closes: #936824).
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 09 Oct 2019 12:09:13 +0200
+
+lazr.uri (1.0.3-3) unstable; urgency=medium
+
+  [ Dimitri John Ledkov ]
+  * Ship README.txt as package data as well.
+  * Add autopkgtests to execute python2 and python3 test-suites.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove XS-Testsuite field, not needed anymore
+  * d/control: Remove ancient X-Python-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Stefano Rivera ]
+  * Bump debhelper compat to 11.
+  * Declare Rules-Requires-Root: no.
+  * Bump copyright years.
+  * Bump Standards-Version to 4.2.1, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 27 Aug 2018 13:00:16 +0100
+
+lazr.uri (1.0.3-2) unstable; urgency=low
+
+  [ Stefano Rivera ]
+  * Get rid of .pth files, dh_python2's namespace support is sufficient
+    (LP: #583426)
+  * Include configure.zcml (LP: #822469)
+  * Update watch file.
+  * Bump machine readable debian/copyright's format to 1.0.
+  * Bump Standards-Version to 3.9.5.
+    * Bump debhelper Build-Dep to 8.1 for build-{arch,indep}.
+  * Bump Copyright years.
+  * Port to pybuild.
+  * Verify upstream PGP signatures with uscan.
+  * Add DEP-12 upstream metadata.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 05 Jun 2014 00:46:06 +0200
+
+lazr.uri (1.0.3-1) unstable; urgency=low
+
+  * New maintainer.
+  * New upstream release (Closes: #656336)
+    - Includes python3 support.
+  * Refreshed patches.
+  * debian/control:
+    - Drop Breaks: ${python:Breaks}, no longer used by dh_python2.
+    - Wrap and sort long lists.
+  * Clean egg-info.
+  * Removed changelog duplicate, NEWS.txt.
+  * debian/copyright: Converted to DEP5 machine-readable format.
+  * Install version.txt via package_data.
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 23 Jan 2012 16:43:58 +0200
+
+lazr.uri (1.0.2-5) unstable; urgency=low
+
+  * Python transition:
+    - Add support for python2.7
+    - Drop support for python2.5
+  * debian/control:
+    - Bump Standards-Version to 3.9.2, no changes required.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 18 Apr 2011 22:25:13 +0200
+
+lazr.uri (1.0.2-4) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 14 Feb 2011 21:15:01 +0100
+
+lazr.uri (1.0.2-3) experimental; urgency=low
+
+  * Switch to dh_python2.
+  * debian/patches/no_package_data.patch:
+    - Do not install documentation files in Python module directory.
+  * debian/control:
+    - Bump Standards-Version to 3.9.1, no changes required.
+  * debian/docs:
+    - Install documentation files under /usr/share/doc.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 04 Dec 2010 11:58:12 +0100
+
+lazr.uri (1.0.2-2) unstable; urgency=low
+
+  * Switch to format 3.0 (quilt).
+  * debian/control:
+    - Move myself as Maintainer, DPMT as Uploaders.
+    - Remove Conflicts/Replaces with python-lazr-uri, they were useful
+      for Ubuntu Lucid only.
+    - Bump Standards-Version to 3.8.4, no changes required.
+  * debian/rules:
+    - Install upstream changelog.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 29 Apr 2010 21:48:51 +0200
+
+lazr.uri (1.0.2-1) unstable; urgency=low
+
+  * Initial Debian release (Closes: #532703).
+  * Package taken from Ubuntu, major changes introduced are:
+    - Switch to debhelper 7.
+    - Switch to python-support.
+    - Binary package renamed to python-lazr.uri to match module name.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 17 Oct 2009 11:37:52 +0200
+
+lazr.uri (1.0-0ubuntu1) karmic; urgency=low
+
+  * Initial release.
+  * Comment out "setup_requires" so that setuptools doesn't try to download
+    the packages there at build time.
+
+ -- James Westby <james.westby@ubuntu.com>  Wed, 10 Jun 2009 19:17:46 +0100
