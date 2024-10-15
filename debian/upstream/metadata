@@ -1,0 +1,9 @@
+---
+Bug-Database: https://bugs.launchpad.net/lazr.uri
+Bug-Submit: https://bugs.launchpad.net/lazr.uri/+filebug
+Changelog: https://bazaar.launchpad.net/~lazr-developers/lazr.uri/trunk/view/head:/src/lazr/uri/NEWS.txt
+Registry:
+  - Name: PyPI
+    Entry: lazr.uri
+Repository: https://code.launchpad.net/~lazr-developers/lazr.uri/trunk
+Repository-Browse: https://bazaar.launchpad.net/~lazr-developers/lazr.uri/trunk/files

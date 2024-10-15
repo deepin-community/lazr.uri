@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: lazr.uri
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Stefano Rivera <stefanor@debian.org>
+Uploaders: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-pytest,
+ python3-setuptools
+Standards-Version: 4.7.0
+Homepage: https://launchpad.net/lazr.uri
+Vcs-Git: https://salsa.debian.org/python-team/packages/lazr.uri.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/lazr.uri
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-lazr.uri
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: library for parsing, manipulating, and generating URIs
+ A self-contained, easily reusable, Python library for parsing,
+ manipulating and generating URIs. With it you can extract parts
+ of a URL, compare URIs to see if one contains another, search for
+ URIs in text, and many other things.
+ .
+ This package contains the library for Python 3.x.

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -euf
+for py in $(py3versions -s); do
+	echo "===== $py ====="
+	TERM=dumb $py -m zope.testrunner -vv -s lazr.uri.tests \
+		--test-path /usr/lib/python3/dist-packages/
+done
